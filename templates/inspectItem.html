@@ -1,0 +1,49 @@
+{% extends "template.html" %} {% block content %} {{ error }} {% for message in get_flashed_messages() %}
+<div class="alert alert-warning">
+    <button type="button" class="close" data-dismiss="alert">
+            &times;
+          </button> {{ message }}
+</div>
+{% endfor %}
+<div class="container">
+    <h1>{{ itemName }}</h1>
+    <div class="row">
+        <div class="col-sm-4">
+ <img class="productPageImages" src="{{url_for('static', filename='uploads/')}}{{imageRow}}.jpg">
+        </div>
+        <div class="col-sm-8">
+            
+            <h3>
+                    Model Reference</h3>
+
+                    <h4>{{modRef}}</h4>
+            
+        
+            <table class="table table-striped table-dark">
+                    <tr class="orange">
+                      <th scope="col">Model Number</th>
+                      <th scope="col">{{measurement[0]}}</th>
+                      <th style="display: {{display}};" scope="col">{{measurement[1]}}</th>
+                      <th style="display: {{display}};" scope="col">{{measurement[2]}}</th>
+                      <th style="display: {{display}};" scope="col">{{measurement[3]}}</th>
+                    </tr>{% for row in results %}
+
+                    <tr>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[4] }}</td>
+            <td >{{ row[6] }}</td>
+            <td >{{ row[8] }}</td>
+            <td >{{ row[10] }}</td>
+            
+            
+            
+                    </tr>{% endfor %}    
+                            
+                                          
+                            
+            
+                </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
