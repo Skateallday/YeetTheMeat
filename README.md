@@ -1,2 +1,0 @@
-# aitkens
-electrical wholesales
