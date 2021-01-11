@@ -87,3 +87,4 @@ sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed
 2021-01-11 10:17:23,987 INFO: Microblog startup [in D:\marci\DEV\blogpractice\YeetTheMeat\app\__init__.py:45]
 2021-01-11 10:18:37,413 INFO: Microblog startup [in D:\marci\DEV\blogpractice\YeetTheMeat\app\__init__.py:45]
 2021-01-11 10:18:42,814 INFO: Microblog startup [in D:\marci\DEV\blogpractice\YeetTheMeat\app\__init__.py:45]
+2021-01-11 10:53:49,958 INFO: Microblog startup [in D:\marci\DEV\blogpractice\YeetTheMeat\app\__init__.py:45]

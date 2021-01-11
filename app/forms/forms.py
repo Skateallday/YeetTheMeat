@@ -62,4 +62,6 @@ class forgotPassword(FlaskForm):
 class PasswordForm(FlaskForm):
     password = PasswordField('Password', validators=[DataRequired()])
 
+class EmptyForm(FlaskForm):
+    submit = SubmitField('Submit')
 
