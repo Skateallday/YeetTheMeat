@@ -26,40 +26,27 @@
 
 <body>
     <header id="header">
-        <div class="container">
+        <div class="container border-bottom sticky-top">
 
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-8">
                     <a href="{{ url_for('home') }}">
                         <h1 class="heading">Yeet The Meat</h1>
                     </a>
                 </div>
-                <div class="col-sm-6">
-                    <div class="row">
-                        <form class="searchForm" method="POST" enctype="multipart/form-data">
-                            <div class="col-sm-10">
-                            
-                            
-                                
-                              </div>
-                            <div class="col-sm-2"> 
-                            </div>
-                        </form>
-                    </div>
-                    
-                </div>
-                <div class="col-sm-2">
-                    <a href="{{ url_for('home') }}">Home</a>
+                <div class="col-sm-4">
+                    <a class="text-right" href="{{ url_for('home') }}">Home</a>
+                    <a href="{{ url_for('explore') }}">Explore</a>
                     {% if current_user.is_anonymous %}
                     <a href="{{ url_for('login') }}">Login</a>
                     {% else %}
-                    <a href="{{ url_for('user', username=current_user.username) }}">Profile</a>
-                    <a href="{{ url_for('logout') }}">Logout</a>
+                    <a class="text-right" href="{{ url_for('user', username=current_user.username) }}">Profile</a>
+                    <a class="text-right" href="{{ url_for('logout') }}">Logout</a>
                     {% endif %}
                 </div>
             </div>
-        </div>
-        <nav class="navbar nav">
+
+        <nav class="navbar nav ">
             <div class="container">
                 <div class="row">
                         <div class="col-sm-12">
@@ -67,15 +54,17 @@
 
                         <div class="nav-scroller py-1 mb-2">
                             <nav class="nav d-flex justify-content-between">
-                            <a class="p-2 text-muted" href={{ url_for ( 'home' ) }}>Home</a>
-                            <a class="p-2 text-muted" href={{ url_for ( 'home' ) }}>Breakfast</a>
-                            <a class="p-2 text-muted" href={{ url_for ( 'home' ) }}>Lunch</a>
-                            <a class="p-2 text-muted" href={{ url_for ('home' ) }}>Snacks </a>
+                                <a class="p-2 text-muted" href={{ url_for ( 'home' ) }}>Home</a>
+                                <a class="p-2 text-muted" href={{ url_for ( 'home' ) }}>Breakfast</a>
+                                <a class="p-2 text-muted" href={{ url_for ( 'home' ) }}>Lunch</a>
+                                <a class="p-2 text-muted" href={{ url_for ('home' ) }}>Snacks </a>
                             </nav>
                         </div>
                     </div>
                 </div>
             </div>
+        </nav>
+        </div>
             <!--
         <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
             Indicators 
@@ -133,7 +122,6 @@
             </a>
         <br>
     -->
-    </nav>
     </header>
 
     <div class="container">

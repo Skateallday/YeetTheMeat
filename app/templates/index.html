@@ -12,11 +12,41 @@
 
     <main role="main" class="container">
       <div class="row">
+        <div class="col-lg-8">
+            <h1>Hi, {{ current_user.username }}!</h1>
+
+            {% if form %}
+            <form action="" method="post">
+              {{ form.hidden_tag() }}
+              <p>
+                {{ form.post.label }}<br>
+                {{ form.post(cols=32, rows=4) }}<br>
+                {% for error in form.post.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+              </p>
+              <p>{{ form.submit() }}</p>
+            </form>
+            {% endif%}
+
+          {% for post in posts %}
+            {% include '_post.html' %}
+          {% endfor %}
+          {% if prev_url %}
+          <a class="btn btn-info" href="{{ prev_url }}">Newer posts</a>
+          {% endif %}
+          {% if next_url %}
+          <a class="btn btn-info" href="{{ next_url }}">Older posts</a>
+          {% endif %}
+
+        </div>
+      </div>
+
+      <div class="row">
         <div class="col-md-8 blog-main">
           <h3 class="pb-3 mb-4 font-italic border-bottom">
             From the Kitchen Counter
           </h3>
-
 
           <div class="blog-post">
             <h2 class="blog-post-title">Another blog post</h2>

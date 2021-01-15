@@ -1,0 +1,108 @@
+2021-01-13 19:55:34,271 INFO: Microblog startup [in D:\marci\DEV\blogpractice\YeetTheMeat\app\__init__.py:45]
+2021-01-13 19:56:05,521 INFO: Microblog startup [in D:\marci\DEV\blogpractice\YeetTheMeat\app\__init__.py:45]
+2021-01-13 19:57:03,936 INFO: Microblog startup [in D:\marci\DEV\blogpractice\YeetTheMeat\app\__init__.py:45]
+2021-01-13 19:57:24,241 INFO: Microblog startup [in D:\marci\DEV\blogpractice\YeetTheMeat\app\__init__.py:45]
+2021-01-13 20:00:42,991 INFO: Microblog startup [in D:\marci\DEV\blogpractice\YeetTheMeat\app\__init__.py:45]
+2021-01-13 20:00:57,148 INFO: Microblog startup [in D:\marci\DEV\blogpractice\YeetTheMeat\app\__init__.py:45]
+2021-01-13 20:01:05,891 INFO: Microblog startup [in D:\marci\DEV\blogpractice\YeetTheMeat\app\__init__.py:45]
+2021-01-13 20:01:38,080 INFO: Microblog startup [in D:\marci\DEV\blogpractice\YeetTheMeat\app\__init__.py:45]
+2021-01-13 20:02:14,412 INFO: Microblog startup [in D:\marci\DEV\blogpractice\YeetTheMeat\app\__init__.py:45]
+2021-01-13 20:03:29,989 INFO: Microblog startup [in D:\marci\DEV\blogpractice\YeetTheMeat\app\__init__.py:45]
+2021-01-13 20:04:22,282 INFO: Microblog startup [in D:\marci\DEV\blogpractice\YeetTheMeat\app\__init__.py:45]
+2021-01-13 20:04:58,765 INFO: Microblog startup [in D:\marci\DEV\blogpractice\YeetTheMeat\app\__init__.py:45]
+2021-01-15 10:19:58,723 INFO: Microblog startup [in D:\marci\DEV\blogpractice\YeetTheMeat\app\__init__.py:45]
+2021-01-15 10:33:14,026 INFO: Microblog startup [in D:\marci\DEV\blogpractice\YeetTheMeat\app\__init__.py:45]
+2021-01-15 10:35:47,116 INFO: Microblog startup [in D:\marci\DEV\blogpractice\YeetTheMeat\app\__init__.py:45]
+2021-01-15 10:39:33,620 INFO: Microblog startup [in D:\marci\DEV\blogpractice\YeetTheMeat\app\__init__.py:45]
+2021-01-15 10:40:06,176 INFO: Microblog startup [in D:\marci\DEV\blogpractice\YeetTheMeat\app\__init__.py:45]
+2021-01-15 10:45:05,935 INFO: Microblog startup [in D:\marci\DEV\blogpractice\YeetTheMeat\app\__init__.py:45]
+2021-01-15 10:46:16,163 INFO: Microblog startup [in D:\marci\DEV\blogpractice\YeetTheMeat\app\__init__.py:45]
+2021-01-15 10:46:19,762 ERROR: Exception on /index [POST] [in d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\marci\DEV\blogpractice\YeetTheMeat\app\routes.py", line 32, in home
+    return redirect(url_for('index'))
+  File "d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\flask\helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\werkzeug\routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'index'. Did you mean 'login' instead?
+2021-01-15 10:46:38,636 ERROR: Exception on /index [POST] [in d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\marci\DEV\blogpractice\YeetTheMeat\app\routes.py", line 32, in home
+    return redirect(url_for('index'))
+  File "d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\flask\helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\werkzeug\routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'index'. Did you mean 'login' instead?
+2021-01-15 10:47:10,827 ERROR: Exception on /index [POST] [in d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\marci\DEV\blogpractice\YeetTheMeat\app\routes.py", line 32, in home
+    return redirect(url_for('index'))
+  File "d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\flask\helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "d:\marci\dev\blogpractice\yeetthemeat\venv\lib\site-packages\werkzeug\routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'index'. Did you mean 'login' instead?
+2021-01-15 10:47:28,928 INFO: Microblog startup [in D:\marci\DEV\blogpractice\YeetTheMeat\app\__init__.py:45]
+2021-01-15 10:54:33,830 INFO: Microblog startup [in D:\marci\DEV\blogpractice\YeetTheMeat\app\__init__.py:45]
