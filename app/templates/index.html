@@ -1,11 +1,11 @@
 {% extends "template.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
 {% block content %}
 
       {% for message in get_flashed_messages() %}
-      <div class="alert alert-warning">
-          <button type="button" class="close" data-dismiss="alert">
-            &times;
-          </button>
+      <div class="alert alert-info" role="alert">
+          <button type="button" class="btn btn-info" data-dismiss="alert" aria-label="Close">X</button>
           {{ message }}
       </div>
     {% endfor %}
@@ -16,28 +16,27 @@
             <h1>Hi, {{ current_user.username }}!</h1>
 
             {% if form %}
-            <form action="" method="post">
-              {{ form.hidden_tag() }}
-              <p>
-                {{ form.post.label }}<br>
-                {{ form.post(cols=32, rows=4) }}<br>
-                {% for error in form.post.errors %}
-                <span style="color: red;">[{{ error }}]</span>
-                {% endfor %}
-              </p>
-              <p>{{ form.submit() }}</p>
-            </form>
+              {{ wtf.quick_form(form, button_map={'submit':'success'})}}<br>
             {% endif%}
 
           {% for post in posts %}
             {% include '_post.html' %}
           {% endfor %}
-          {% if prev_url %}
-          <a class="btn btn-info" href="{{ prev_url }}">Newer posts</a>
-          {% endif %}
-          {% if next_url %}
-          <a class="btn btn-info" href="{{ next_url }}">Older posts</a>
-          {% endif %}
+
+          <nav aria-label="...">
+              <ul class="pager">
+                  <li class="previous{% if not prev_url %} disabled{% endif %}">
+                      <a href="{{ prev_url or '#' }}">
+                          <span aria-hidden="true">&larr;</span> Newer posts
+                      </a>
+                  </li>
+                  <li class="next{% if not next_url %} disabled{% endif %}">
+                      <a href="{{ next_url or '#' }}">
+                          Older posts <span aria-hidden="true">&rarr;</span>
+                      </a>
+                  </li>
+              </ul>
+          </nav>
 
         </div>
       </div>
