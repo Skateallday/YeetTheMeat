@@ -15,4 +15,4 @@ class Config(object):
     MAIL_DEBUG = 1
     ADMINS = ['marcinglis91@hotmail.com']
     SECURITY_EMAIL_SENDER = 'jamfish127@hotmail.com'
-    POST_PER_PAGE=20
+    POST_PER_PAGE=3

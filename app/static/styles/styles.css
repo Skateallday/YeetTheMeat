@@ -11,3 +11,23 @@ a:link{
 .header{
     margin-bottom:15px;
 }
+
+.album{
+    background: #F3C8A3;
+
+}
+#main{
+    background: #F2A988;
+padding-bottom: 30px;
+}
+
+
+.footer{
+    background: #FFD8D6;
+
+    color:#fff;
+}
+.card{
+    background-color: #ffede4;
+    color:#fff;
+}
