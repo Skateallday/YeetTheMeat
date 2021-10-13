@@ -19,7 +19,7 @@
         <link href="{{url_for('static', filename='styles/styles.css')}}" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
-        
+
         {{ moment.include_jquery() }}
         {{ moment.include_moment() }}
 
@@ -128,15 +128,15 @@
 
                   </article>
                 </div>
-               <!--<div class="tile is-parent">
-                  <article class="tile is-child notification is-warning ">
+               <div class="tile is-parent">
+                  <article class="tile is-child notification has-background-warning		">
                     {% include "feature.html" %}
                   </article>
-                </div>-->
+                </div>
               </div>
               <div class="tile is-parent">
                 <article class="tile is-child notification is-danger">
-                    {% block content %}{% endblock %}
+                    {% include "blog.html"  %}
 
                 </article>
               </div>
@@ -144,7 +144,8 @@
             <div class="tile is-parent">
               <article class="tile is-child notification is-success">
                 <div class="content">
-                    {% include "blog.html"  %}
+                    {% block content %}{% endblock %}
+
 
                 </div>
               </article>

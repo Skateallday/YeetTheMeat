@@ -16,3 +16,4 @@ class Config(object):
     ADMINS = ['marcinglis91@hotmail.com']
     SECURITY_EMAIL_SENDER = 'jamfish127@hotmail.com'
     POST_PER_PAGE=3
+    LANGUAGES=['en', 'es']
